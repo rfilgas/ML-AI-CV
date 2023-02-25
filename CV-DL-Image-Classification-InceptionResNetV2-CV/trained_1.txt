@@ -1,0 +1,47 @@
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inception_resnet_v2 (Functi  (None, 3, 3, 1536)       54336736  
+ onal)                                                           
+                                                                 
+ flatten (Flatten)           (None, 13824)             0         
+                                                                 
+ dense (Dense)               (None, 256)               3539200   
+                                                                 
+ dense_1 (Dense)             (None, 1)                 257       
+                                                                 
+=================================================================
+Total params: 57,876,193
+Trainable params: 3,539,457
+Non-trainable params: 54,336,736
+_________________________________________________________________
+Epoch 1/7
+125/125 [==============================] - 74s 547ms/step - loss: 0.9322 - accuracy: 0.9211 - val_loss: 0.2363 - val_accuracy: 0.9680
+Epoch 2/7
+125/125 [==============================] - 64s 511ms/step - loss: 0.4715 - accuracy: 0.9359 - val_loss: 0.4816 - val_accuracy: 0.9435
+Epoch 3/7
+125/125 [==============================] - 64s 513ms/step - loss: 0.3822 - accuracy: 0.9396 - val_loss: 0.3563 - val_accuracy: 0.9375
+Epoch 4/7
+125/125 [==============================] - 66s 525ms/step - loss: 0.3162 - accuracy: 0.9414 - val_loss: 0.1400 - val_accuracy: 0.9675
+Epoch 5/7
+125/125 [==============================] - 67s 536ms/step - loss: 0.2596 - accuracy: 0.9401 - val_loss: 0.1459 - val_accuracy: 0.9590
+Epoch 6/7
+125/125 [==============================] - 69s 549ms/step - loss: 0.1443 - accuracy: 0.9499 - val_loss: 0.0737 - val_accuracy: 0.9690
+Epoch 7/7
+125/125 [==============================] - 71s 570ms/step - loss: 0.1328 - accuracy: 0.9493 - val_loss: 0.0733 - val_accuracy: 0.9700
+1/1 [==============================] - 14s 14s/step - loss: 0.0733 - accuracy: 0.9700
+test loss, test acc: [0.07334686815738678, 0.9700000286102295]
+1/1 [==============================] - 14s 14s/step
+Confusion Matrix
+[[982  18]
+ [ 42 958]]
+Classification Report
+              precision    recall  f1-score   support
+
+        cats       0.96      0.98      0.97      1000
+        dogs       0.98      0.96      0.97      1000
+
+    accuracy                           0.97      2000
+   macro avg       0.97      0.97      0.97      2000
+weighted avg       0.97      0.97      0.97      2000

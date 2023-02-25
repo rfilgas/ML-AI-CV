@@ -1,0 +1,31 @@
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inception_resnet_v2 (Functi  (None, 3, 3, 1536)       54336736  
+ onal)                                                           
+                                                                 
+ flatten (Flatten)           (None, 13824)             0         
+                                                                 
+ dense (Dense)               (None, 256)               3539200   
+                                                                 
+ dense_1 (Dense)             (None, 1)                 257       
+                                                                 
+=================================================================
+Total params: 57,876,193
+Trainable params: 57,815,649
+Non-trainable params: 60,544
+_________________________________________________________________
+1/1 [==============================] - 15s 15s/step
+Confusion Matrix
+[[253 747]
+ [504 496]]
+Classification Report
+              precision    recall  f1-score   support
+
+        cats       0.33      0.25      0.29      1000
+        dogs       0.40      0.50      0.44      1000
+
+    accuracy                           0.37      2000
+   macro avg       0.37      0.37      0.37      2000
+weighted avg       0.37      0.37      0.37      2000
